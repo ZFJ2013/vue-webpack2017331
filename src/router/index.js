@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import hello from '../components/Hello'
+import App from '../App'
 
 Vue.use(Router)
 
@@ -10,13 +11,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-    	path: '/login',
-    	name: 'login',
-    	component: login
+      component: App, // 顶层路由，对应index.html
+      children: [ // 二级路由。对应App.vue
+        {
+          path: '',
+          name: 'Hello',
+          component: hello
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: login
+        }
+      ]
     }
   ]
 })

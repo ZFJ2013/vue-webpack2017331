@@ -1,3 +1,5 @@
+http://vuejs-templates.github.io/webpack/
+
 Project Structure
 
 .

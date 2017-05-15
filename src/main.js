@@ -8,7 +8,6 @@ Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
   store
-})
+}).$mount('#app')
